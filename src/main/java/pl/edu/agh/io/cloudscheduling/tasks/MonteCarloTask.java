@@ -1,9 +1,9 @@
 package pl.edu.agh.io.cloudscheduling.tasks;
 
+import pl.edu.agh.io.cloudscheduling.VMResource;
 import pl.edu.agh.io.cloudscheduling.entities.CloudTask;
 import pl.edu.agh.io.cloudscheduling.entities.MCRequest;
 import pl.edu.agh.io.cloudscheduling.entities.MCResult;
-import pl.edu.agh.io.cloudscheduling.VMResource;
 import pl.joegreen.lambdaFromString.LambdaCreationException;
 import pl.joegreen.lambdaFromString.LambdaFactory;
 import pl.joegreen.lambdaFromString.LambdaFactoryConfiguration;
