@@ -105,9 +105,12 @@ public class VMResource {
     }
 
     public static void main(String[] args) {
-        String host = "10.154.0.2";
-        String user = "user";
-        String password = "pDCNHoRq3kaR";
+        //String host = "10.154.0.2";
+        String host = "localhost";
+        //String user = "user";
+        String user = "somas3k";
+        //String password = "pDCNHoRq3kaR";
+        String password = "Sabina95";
         String dispatcher = "CTSD";
         String register = "CTSR";
         String vmKey = null;
