@@ -1,14 +1,11 @@
 package pl.edu.agh.io.cloudscheduling.entities;
 
-
-
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.context.request.async.DeferredResult;
 import pl.edu.agh.io.cloudscheduling.utils.TaskStatus;
 
 import java.io.Serializable;
 
 public abstract class CloudTask implements Comparable<CloudTask>, Serializable {
+    static final long serialVersionUID = 1234L;
     private final long taskId;
 
     // virtual machine which will execute this task
@@ -31,8 +28,6 @@ public abstract class CloudTask implements Comparable<CloudTask>, Serializable {
 
     private CloudResult result;
 
-    private transient DeferredResult<ResponseEntity<CloudResult>> responseResult;
-
     public CloudResult getResult() {
         return result;
     }
@@ -44,14 +39,6 @@ public abstract class CloudTask implements Comparable<CloudTask>, Serializable {
 
     public long getSchedulingTime() {
         return schedulingfinishTime - schedulingStartTime;
-    }
-
-    public void setResponseResult(DeferredResult<ResponseEntity<CloudResult>> responseResult) {
-        this.responseResult = responseResult;
-    }
-
-    public DeferredResult<ResponseEntity<CloudResult>> getResponseResult() {
-        return responseResult;
     }
 
     public CloudTask(long taskId, long taskLength) {
